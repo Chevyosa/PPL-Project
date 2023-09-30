@@ -35,3 +35,15 @@ body{
     align-items: center;
     border-color: #E61B4F;
 }
+.titleprofile{
+    margin-bottom: 100px;
+}
+#profile{
+    width: 200px;
+}
+#profilepad{
+    padding: 30px;
+}
+.roundedImage{
+    border-radius: 50%;
+}
