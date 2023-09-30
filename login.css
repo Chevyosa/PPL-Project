@@ -1,0 +1,38 @@
+body{
+    background-image: url('./Images/Stetoskop\ &\ Thermo.jpg');
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#square{
+    margin-top: 110px;
+}
+#center-square {
+    width: 800px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color: #FFFFFF;   
+}
+.loginButton{
+    margin-top: 15px;
+    margin-left: 25px;
+    color: #FFFFFF;
+    background-color: #E61B4F;
+    border-radius: 10px;
+    padding: 7.5px 30px;
+    border:none;
+    align-items: center;
+}
+.backButton{
+    margin-top: 20px;
+    color: #E61B4F;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 7.5px 30px;
+    align-items: center;
+    border-color: #E61B4F;
+}
