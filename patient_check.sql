@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2023 at 05:26 PM
+-- Generation Time: Oct 01, 2023 at 08:41 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -46,6 +46,25 @@ CREATE TABLE `patient` (
   `nama_penyakit` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff`
+--
+
+CREATE TABLE `staff` (
+  `staffID` varchar(50) NOT NULL,
+  `staffPassword` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `staff`
+--
+
+INSERT INTO `staff` (`staffID`, `staffPassword`) VALUES
+('C200', 'de9bf5643eabf80f4a56fda3bbb84483'),
+('W250', '84cdfd8c9ac9a6fe0245ede89cdfc8b7');
+
 --
 -- Indexes for dumped tables
 --
@@ -63,6 +82,12 @@ ALTER TABLE `disease`
 ALTER TABLE `patient`
   ADD PRIMARY KEY (`id_pasien`),
   ADD KEY `nama_penyakit` (`nama_penyakit`);
+
+--
+-- Indexes for table `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`staffID`);
 
 --
 -- Constraints for dumped tables
