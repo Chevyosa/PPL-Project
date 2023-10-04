@@ -9,7 +9,6 @@
         <title>Homepage - Patient Checkup</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="./Images/Stethoscope 1.png" type="image/png">
     </head>
     <body>
@@ -22,10 +21,13 @@
                 <div class="navbar-expand">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./homepage.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="./homepage.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./about-us.html">About Us</a>
+                            <a class="nav-link" href="./about-us.php">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html" id="loginButton">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -43,13 +45,9 @@
                     <span style="font-weight: 200; font-size: 15px">Group Five Medical Solution</span>
                 </div>
                 <div>
-                    <button class="regButton">Register Data</button>
-                </div>
-                <div>
-                    <button class="directoryButton">Patient Directory</button>
+                    <a href="./directory.php"><button class="directoryButton">Manage Patient Data</button></a>
                 </div>
             </div>
         </div>
-        
     </body>
 </html>
