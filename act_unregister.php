@@ -1,15 +1,14 @@
 <?php 
     include "./connection.php";    
 
-    if($_GET['act']== 'unregister')
+    if($_GET['act']== 'unregisterpasien')
     {
-        $id = $_GET['id'];
-        $querydelete = mysqli_query($conn, "DELETE from patient WHERE id='$id'");
+        $id = $_GET['id_pasien'];
+        $querydelete = mysqli_query($conn, "DELETE from pasien WHERE id_pasien='$id'");
     
         if ($querydelete) 
         {
-            #redirect ke page index
-            header("location: manage_patient.php");    
+            header("location: directory.php");    
         }
         else
         {

@@ -21,13 +21,10 @@
                 <div class="navbar-expand">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./homepage.php">Home</a>
+                            <a class="nav-link" aria-current="page" id="active" href="./homepage.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./about-us.php">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./login.php" id="loginButton">Login</a>
                         </li>
                     </ul>
                 </div>

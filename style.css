@@ -36,3 +36,6 @@ body{
     align-items: center;
     border-color: #E61B4F;
 }
+#active{
+    color: #E61B4F;
+}

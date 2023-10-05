@@ -9,13 +9,13 @@
         <title>Patient Directory</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="directory.css">
-        <link rel="icon" href="./Images/Stethoscope 1.png" type="image/png">
+        <link rel="icon" href="Stethoscope 1.png" type="image/png">
     </head>
     <body>
         <nav class="navbar fixed-top bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand">
-                    <img src="./Images/Stethoscope 1.png" alt="Logo" width="40" height="30" style="padding-right: 10px; "class="d-inline-block align-text-top">
+                    <img src="Stethoscope 1.png" alt="Logo" width="40" height="30" style="padding-right: 10px; "class="d-inline-block align-text-top">
                     <span style="font-weight: 500;">PATIENT MEDICAL CHECKUP</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,7 @@
                             <h4 class="text-muted">Let you manage the Patients</h4>
                         </div>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#registerPatient">Register Patient</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#registerpasien">Register Patient</button>
                         </div>
                     </div>
                     <?php 
@@ -53,5 +53,42 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script>
+        $(document).ready(function () 
+        {
+            $(".edit").off("click").on("click",function() 
+            {              
+                var id_data = $(this).attr("data-id");
+                $.ajax
+                ({                        
+                    url : "act_edit.php?id_pasien="+id_data,
+                    type: "GET",
+                    dataType: "JSON",
+                    success: function(data)
+                    {                                    
+                        $("#id").val(data.id_pasien);                     
+                        $("#nama").val(data.nama_pasien);                     
+                        $("#umur").val(data.umur_pasien);                                         
+                        $("#penyakit").val(data.nama_penyakit);                     
+                        $(".modal-update").modal('show');                             
+                    }
+                });    
+            });
+            
+            $(".hapus").off("click").on("click",function()
+            {
+                var id_data = $(this).attr("data-id");
+                $.ajax({
+                    url : "act_unregister.php?id_pasien="+id_data,
+                    type : "POST",
+                    success : function(data)
+                    {
+                        window.location = "homepage.php";
+                    }
+                });
+            });
+            
+        });
+        </script>
     </body>
 </html>
